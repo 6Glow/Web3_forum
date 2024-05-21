@@ -16,7 +16,7 @@ contract Comments {
     mapping(string => Comment[]) private commentsByTopic;
         
     event CommentAdded(Comment comment);
-
+    
     function getComments(string calldata topic) public view returns(Comment[] memory) {
        return commentsByTopic[topic];
     }
